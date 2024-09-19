@@ -1,0 +1,185 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#technical-skills" onclick="showSlide(0)">Technical Skills</a></li>
+                <li><a href="#non-technical-skills" onclick="showSlide(1)">Non-Technical Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div class="carousel">
+            <div class="carousel-item active" id="technical-skills">
+                <h2>Technical Skills</h2>
+                <div class="skills-container">
+                    <div class="skills-row">
+                        <div class="skill">
+                            <h3>Problem Solving</h3>
+                            <img src="https://www.potential.com/wp-content/uploads/2017/11/problem-solving.png" alt="Problem solving"/>
+                            <p>Identifying, analyzing, and resolving issues effectively and efficiently.</p>
+                        </div>
+                        <div class="skill">
+                            <h3>Web Development</h3>
+                            <img src="https://api.reliasoftware.com/uploads/web_development_is_important_176fa0618e.jpg" alt="Web Development" />
+                            <p>Proficient in HTML, CSS, JavaScript, and frameworks like React and Angular.</p>
+                        </div>
+                    </div>
+                    <div class="skills-row">
+                        <div class="skill">
+                            <h3>Graphic Design</h3>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcaPEW7H7wzCfJ2hncWDJH8ueb9pYf3VBqpw&s" alt="Graphic Design" />
+                            <p>Experienced with Adobe Photoshop, Illustrator, and UI/UX principles.</p>
+                        </div>
+                        <div class="skill">
+                            <h3>Software Development</h3>
+                            <img src="https://blog.planview.com/wp-content/uploads/2020/01/Top-6-Software-Development-Methodologies.jpg" alt="Software Development"/>
+                            <p>Designing, creating, testing and maintaining software applications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" id="non-technical-skills">
+                <h2>Non-Technical Skills</h2>
+                <div class="skills-container">
+                    <div class="skills-row">
+                        <div class="skill">
+                            <h3>Public Speaking</h3>
+                            <img src="https://t4.ftcdn.net/jpg/04/34/66/53/240_F_434665315_Px470fak945gL2MqTDxhL5om5qgH4lmJ.jpg" alt="Public speaking" />
+                            <p>Effectively communicating ideas and engaging an audience through clear, confident, and persuasive delivery.</p>
+                        </div>
+                        <div class="skill">
+                            <h3>Team Collaboration</h3>
+                            <img src="https://static.jobscan.co/blog/uploads/Problem-Solving-Skills.jpg" alt="Team collaboration"/>
+                            <p>Experience in working well with others, especially in diverse teams, is highly valued.</p>
+                        </div>
+                    </div>
+                    <div class="skills-row">
+                        <div class="skill">
+                            <h3>Adaptability</h3>
+                            <img src="https://gritsearch.com/wp-content/uploads/2023/01/adaptability-skills-1.jpg" alt="Adaptability"/>
+                            <p>Ability to quickly adjust to new environments, tools, or challenges.</p>
+                        </div>
+                        <div class="skill">
+                            <h3>Quick Learner</h3>
+                            <img src="https://safety4sea.com/wp-content/uploads/2018/05/learn-e1526048614854.png" alt="Quick learner"/>
+                            <p>Emphasizing the ability to learn new tasks quickly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-btn prev" onclick="prevSlide()">Previous</button>
+        <button class="carousel-btn next" onclick="nextSlide()">Next</button>
+    </section>
+
+    <style>
+        body {
+            font-family: 'Lato';
+        }
+        header {
+            background-color: #2c3e50; /* Dark blue header */
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+        }
+        nav ul {
+            list-style: none; /* Remove bullets */
+            padding: 0; /* Remove padding */
+        }
+        nav ul li {
+            display: inline; /* Display list items inline */
+            margin: 0 15px; /* Spacing between items */
+        }
+        nav ul li a {
+            color: white; /* Link color */
+            text-decoration: none; /* Remove underline */
+        }
+        nav ul li a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+        section {
+            text-align: center; /* Center the heading */
+            margin: 20px 0; /* Add some vertical spacing */
+        }
+        .carousel {
+            position: relative;
+            width: 90%; /* Adjust width as needed */
+            margin: 0 auto; /* Center the carousel */
+            overflow: hidden;
+        }
+        .carousel-item {
+            display: none; /* Hide all items by default */
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .carousel-item.active {
+            display: block; /* Show the active item */
+        }
+        .skills-container {
+            margin-bottom: 20px; /* Space between skill sets */
+        }
+        .skills-row {
+            display: flex; /* Use flexbox to align items horizontally */
+            justify-content: space-around; /* Space items evenly */
+            margin-bottom: 20px; /* Space between rows */
+        }
+        .skill {
+            width: 220px; /* Set width for each skill card */
+            text-align: left; /* Align text to left */
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+            padding: 10px;
+            border-radius: 5px; /* Rounded corners */
+        }
+        .carousel-item img {
+            width: 100%; /* Make image responsive */
+            height: 150px; /* Fixed height for uniformity */
+            object-fit: cover; /* Maintain aspect ratio */
+            border-radius: 5px; /* Rounded corners for images */
+            margin-bottom: 10px; /* Spacing between image and text */
+        }
+        .carousel-btn {
+            margin: 10px; /* Spacing between buttons */
+            padding: 10px 15px; /* Button padding */
+            border: none; /* Remove default border */
+            background-color: #007BFF; /* Button background */
+            color: white; /* Button text color */
+            border-radius: 5px; /* Rounded corners for buttons */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+        .carousel-btn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const items = document.querySelectorAll('.carousel-item');
+            items.forEach((item, i) => {
+                item.classList.toggle('active', i === index);
+            });
+            currentSlide = index; // Update current slide index
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % document.querySelectorAll('.carousel-item').length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + document.querySelectorAll('.carousel-item').length) % document.querySelectorAll('.carousel-item').length;
+            showSlide(currentSlide);
+        }
+
+        showSlide(currentSlide);
+    </script>
+</body>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f7ff; /* Light blue background */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2c3e50; /* Dark blue header */
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+        }
+        .projects-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center the grid items */
+            gap: 20px;
+        }
+        .project-card {
+            background-color: #ffffff; /* Card background */
+            border: 1px solid #ccc; /* Light border */
+            border-radius: 8px;
+            padding: 15px;
+            flex-basis: 300px; /* Fixed width for cards */
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative; /* For the text effect */
+            animation: fadeIn 0.5s ease;
+            overflow: hidden; /* Hide overflow */
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .project-card h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #333; /* Dark text */
+        }
+        .project-card p {
+            font-size: 14px;
+            margin-top: 8px;
+            color: #666; /* Slightly lighter text */
+        }
+        .project-description {
+            font-size: 12px;
+            color: #444; /* Description color */
+            margin-top: 5px;
+        }
+        .rating {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .rating span {
+            color: gold;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 16px;
+            color: #333; /* Dark text for footer */
+        }
+        @media (max-width: 768px) {
+            .project-card {
+                flex-basis: 100%; /* Full width on small screens */
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    My Projects
+</header>
+
+<div class="container">
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3>Code Craft</h3>
+            <p>Jan 2024</p>
+            <p class="project-description">An innovative project focusing on enhancing coding skills through interactive challenges.</p>
+            <div class="rating">
+                <span>★★★★☆</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3>Pixel Perfect</h3>
+            <p>Feb 2024</p>
+            <p class="project-description">A design-oriented project aimed at achieving flawless pixel alignment in graphics.</p>
+            <div class="rating">
+                <span>★★★☆☆</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3>Web Wonders</h3>
+            <p>Mar 2024</p>
+            <p class="project-description">A collection of web applications showcasing creativity and technical prowess.</p>
+            <div class="rating">
+                <span>★★★☆☆</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3>Smart India Hackathon</h3>
+            <p>Apr 2024</p>
+            <p class="project-description">A national level hackathon to tackle real-world problems with innovative solutions.</p>
+            <div class="rating">
+                <span>★★★★★</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3>Project Pulse</h3>
+            <p>May 2024</p>
+            <p class="project-description">A health-focused initiative aimed at promoting wellness and healthy living.</p>
+            <div class="rating">
+                <span>★★★☆☆</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3>Dynamic Dimensions</h3>
+            <p>Jun 2024</p>
+            <p class="project-description">An engaging project that explores the use of dynamic elements in web design.</p>
+            <div class="rating">
+                <span>★★★★☆</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3>Tech Tonic</h3>
+            <p>July 2024</p>
+            <p class="project-description">A tech-centric project focused on providing solutions for everyday problems.</p>
+            <div class="rating">
+                <span>★★★☆☆</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3>Weather Prediction</h3>
+            <p>Aug 2024</p>
+            <p class="project-description">An application designed to forecast weather conditions using advanced algorithms.</p>
+            <div class="rating">
+                <span>★★★☆☆</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3>Fit Finder</h3>
+            <p>Sep 2024</p>
+            <p class="project-description">A fitness app that helps users find workout routines tailored to their goals.</p>
+            <div class="rating">
+                <span>★★★★☆</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3>Heathers HQ</h3>
+            <p>Oct 2024</p>
+            <p class="project-description">The central hub for all activities and projects of Team Heathers.</p>
+            <div class="rating">
+                <span>★★★☆☆</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
